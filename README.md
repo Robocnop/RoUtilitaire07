@@ -4,3 +4,5 @@
 Mon utilitaire PC en batch. 
 
 <i>projet que je fais quand j'ai du temps libre</i>
+
+[Lien vers les releases](https://github.com/Robocnop/RoUtilitaire07/releases)
