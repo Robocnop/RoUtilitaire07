@@ -66,7 +66,8 @@ if "%choix%"=="4" (
 )
 if "%choix%"=="5" (
     echo Fermeture de l'utilitaire. À bientôt !
-    timeout /t 2 > nul
+    echo This program has been developed by Robocnop
+    timeout /t 3 > nul
     exit
 )
 if /i "%choix%"=="Roboclop" (
