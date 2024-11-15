@@ -1,3 +1,5 @@
+![GitHub all releases](https://img.shields.io/github/downloads/Robocnop/RoUtilitaire07/total)
+
 # RoUtilitaire07
 Mon utilitaire PC en batch. 
 
