@@ -14,4 +14,3 @@ Robocnop & Tronix28
 
 Celui de Tronix28: [WinTool-box](https://github.com/Tronix28/WinTool-Box) (Une partie du code viens de là, n'hésiter à aller essayez son utilitaire).
 
-Merci d'avoir téléchargé ce software :)
