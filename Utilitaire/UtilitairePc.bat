@@ -18,7 +18,9 @@ echo [4] - Heure et date actuelle
 echo [5] - Outils Réseau
 echo [6] - Outils Processus
 echo [7] - Supprimer le Filigrane
-echo [8] - Quitter
+echo [8] - Redémarrage dans le BIOS
+echo [9] - Annuler le redémarrage
+echo [10] - Quitter
 echo.
 echo ====================================================
 set /p choix=Entrez votre choix (1-8) :
@@ -73,6 +75,20 @@ if "%choix%"=="7" (
     goto Filigrane
 )
 if "%choix%"=="8" (
+    echo "Attention redémarrage. Sauvegardez vos fichiers ! (Vous avez 10 secondes)"
+    timeout /t 2 > nul
+    PowerShell -Command "Start-Process PowerShell -ArgumentList '-Command shutdown /r /fw /t 10' -Verb RunAs" >nul
+    echo Redémarrage échoué
+    timeout /t 2 > nul
+    goto menu
+)
+if "%choix%"=="9" (
+    echo Annnulation du redémarrage
+    shutdown -a
+    timeout /t 2 > nul
+    goto menu
+)
+if "%choix%"=="10" (
     echo Fermeture de la Toolbox. À bientôt !
     echo "Ce programme a été développé par Robocnop & Tronix"
     timeout /t 3 > nul
