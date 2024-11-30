@@ -19,7 +19,7 @@ echo [5] - Outils Réseau
 echo [6] - Outils Processus
 echo [7] - Supprimer le Filigrane
 echo [8] - Redémarrage dans le BIOS
-echo [9] - Annnulé le redémarrage
+echo [9] - Annuler le redémarrage
 echo [10] - Quitter
 echo.
 echo ====================================================
