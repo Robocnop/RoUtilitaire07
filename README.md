@@ -8,7 +8,9 @@ Mon utilitaire PC en batch.
 
 # Crédits
 
-Robocnop & Tronix28 
+- Robocnop (Main Dev)
+- Tronix28 (Dev)
+- Antoniofo (Premier contributeur)
 
 # Autre projets
 
