@@ -6,13 +6,13 @@ color 1F
 :menu
 cls
 echo ====================================================
-echo             *** WinToolbox V1.1.0 *** 
+echo             *** WinToolbox V1.2.0 *** 
 echo ====================================================
 echo.
 echo Choisissez une option :
 echo.
 echo [1] - Ouvrir le répertoire C:\
-echo [2] - Ouvrir le répertoire D:\
+echo [2] - Ouvrir un répertoire au choix
 echo [3] - Afficher les informations du PC
 echo [4] - Heure et date actuelle
 echo [5] - Outils Réseau
@@ -32,10 +32,7 @@ if "%choix%"=="1" (
     goto menu
 )
 if "%choix%"=="2" (
-    echo Ouverture du répertoire D:\ ...
-    start explorer D:\
-    timeout /t 1 > nul
-    goto menu
+    goto Repertoire
 )
 if "%choix%"=="3" (
     cls
@@ -46,7 +43,7 @@ if "%choix%"=="3" (
     echo Nom de l'utilisateur : %USERNAME%
     echo Version de Windows : %OS%
     echo Répertoire système : %SYSTEMROOT%
-    echo Chemin actuel : %CD%
+    echo Chemin actuel où le script a été lancé : %CD%
     echo Architecture du processeur : %PROCESSOR_ARCHITECTURE%
     echo Processeur : %PROCESSOR_IDENTIFIER%
     echo Nombre de cœurs logiques : %NUMBER_OF_PROCESSORS%
@@ -108,6 +105,20 @@ if /i "%choix%"=="Roboclop" (
     goto menu
 )
 echo Choix invalide. Veuillez entrer un chiffre entre 1 et 8.
+pause
+goto menu
+
+:: Menu Repertoire
+
+:Repertoire
+cls
+echo ====================================================
+echo               *** Répertoire ***
+echo ====================================================
+echo.
+set /P repcs="Le répertoire à ouvrir ? (exemple: C:) :"
+echo Ouverture du répertoire %repcs%....
+start %repcs%
 pause
 goto menu
 
